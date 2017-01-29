@@ -1,0 +1,19 @@
+PODS:
+  - AWSCognito (2.4.9):
+    - AWSCore (= 2.4.9)
+  - AWSCognitoSync (2.4.9):
+    - AWSCognito (= 2.4.9)
+  - AWSCore (2.4.9)
+
+DEPENDENCIES:
+  - AWSCognitoSync
+  - AWSCore
+
+SPEC CHECKSUMS:
+  AWSCognito: 4fa9fefcadae1d8425b01cbde27d564c21e3fd35
+  AWSCognitoSync: 782bf24e7a13a0590ca7d775535e5f0f7f3543e8
+  AWSCore: 175208358b95492e0ebe0337df2ab415300bddac
+
+PODFILE CHECKSUM: c72eedea814e7fb0be7659cccbbbff38ceaf0dc8
+
+COCOAPODS: 1.2.0

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48DB77C9BBBB94144272B72D /* Pods_CognitoSyncExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2080FEF6C0EF78A9B2CEA41C /* Pods_CognitoSyncExample.framework */; };
 		6249692E1E3CDDFF00C628D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6249692D1E3CDDFF00C628D9 /* AppDelegate.swift */; };
 		624969301E3CDDFF00C628D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6249692F1E3CDDFF00C628D9 /* ViewController.swift */; };
 		624969331E3CDDFF00C628D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 624969311E3CDDFF00C628D9 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		187603ADE7E5F3E6513549AA /* Pods-CognitoSyncExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CognitoSyncExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-CognitoSyncExample/Pods-CognitoSyncExample.release.xcconfig"; sourceTree = "<group>"; };
+		2080FEF6C0EF78A9B2CEA41C /* Pods_CognitoSyncExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CognitoSyncExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6249692A1E3CDDFF00C628D9 /* CognitoSyncExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CognitoSyncExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6249692D1E3CDDFF00C628D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6249692F1E3CDDFF00C628D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		624969341E3CDDFF00C628D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		624969371E3CDDFF00C628D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		624969391E3CDDFF00C628D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E01711AD9C8EF27B4E2F4A3 /* Pods-CognitoSyncExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CognitoSyncExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CognitoSyncExample/Pods-CognitoSyncExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48DB77C9BBBB94144272B72D /* Pods_CognitoSyncExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				6249692C1E3CDDFF00C628D9 /* CognitoSyncExample */,
 				6249692B1E3CDDFF00C628D9 /* Products */,
+				9875664E300D9BF87C903065 /* Pods */,
+				E34C1FE30032D8A8980E5897 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = CognitoSyncExample;
 			sourceTree = "<group>";
 		};
+		9875664E300D9BF87C903065 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E01711AD9C8EF27B4E2F4A3 /* Pods-CognitoSyncExample.debug.xcconfig */,
+				187603ADE7E5F3E6513549AA /* Pods-CognitoSyncExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E34C1FE30032D8A8980E5897 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2080FEF6C0EF78A9B2CEA41C /* Pods_CognitoSyncExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6249693C1E3CDDFF00C628D9 /* Build configuration list for PBXNativeTarget "CognitoSyncExample" */;
 			buildPhases = (
+				C5F46C09C34D77D28ECB4211 /* [CP] Check Pods Manifest.lock */,
 				624969261E3CDDFF00C628D9 /* Sources */,
 				624969271E3CDDFF00C628D9 /* Frameworks */,
 				624969281E3CDDFF00C628D9 /* Resources */,
+				9831A30F3E8760F5999B59B5 /* [CP] Embed Pods Frameworks */,
+				57C2E10CAC96CB4A14ADF7A5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57C2E10CAC96CB4A14ADF7A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CognitoSyncExample/Pods-CognitoSyncExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9831A30F3E8760F5999B59B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CognitoSyncExample/Pods-CognitoSyncExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5F46C09C34D77D28ECB4211 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		624969261E3CDDFF00C628D9 /* Sources */ = {
@@ -256,6 +331,7 @@
 		};
 		6249693D1E3CDDFF00C628D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E01711AD9C8EF27B4E2F4A3 /* Pods-CognitoSyncExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CognitoSyncExample/Info.plist;
@@ -268,6 +344,7 @@
 		};
 		6249693E1E3CDDFF00C628D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 187603ADE7E5F3E6513549AA /* Pods-CognitoSyncExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CognitoSyncExample/Info.plist;
