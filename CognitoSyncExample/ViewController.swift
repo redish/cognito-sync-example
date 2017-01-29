@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AWSCore
+import AWSCognito
 
 class ViewController: UIViewController {
 
@@ -20,6 +22,13 @@ class ViewController: UIViewController {
         let configuration = AWSServiceConfiguration(region:.apNortheast1, credentialsProvider:credentialsProvider)
         AWSServiceManager.default().defaultServiceConfiguration = configuration
         
+        // Initialize the Cognito Sync client
+        let syncClient = AWSCognito.default()
+
+        // Create a record in a dataset and synchronize with the server
+        let dataset = syncClient?.openOrCreateDataset("myDataset")
+        dataset?.setString("myValue", forKey:"myKey")
+        dataset?.synchronize()
     }
 
     override func didReceiveMemoryWarning() {
