@@ -9,8 +9,8 @@
 #ifndef Bridging_Header_h
 #define Bridging_Header_h
 
-#import <AWSCore.h>
-#import <AWSCognito.h>
+#import <AWSCore/AWSCore.h>
+#import <AWSCognito/AWSCognito.h>
 
 
 #endif /* Bridging_Header_h */
