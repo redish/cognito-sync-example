@@ -21,14 +21,23 @@ class ViewController: UIViewController {
                                                                 identityPoolId:"ap-northeast-1:b5e7ba68-6b00-4caf-a8f1-ed5a9a03077b")
         let configuration = AWSServiceConfiguration(region:.apNortheast1, credentialsProvider:credentialsProvider)
         AWSServiceManager.default().defaultServiceConfiguration = configuration
+
+        // Create Now String
+        let now = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let nowString = formatter.string(from: now)
         
         // Initialize the Cognito Sync client
         let syncClient = AWSCognito.default()
-
-        // Create a record in a dataset and synchronize with the server
-        let dataset = syncClient?.openOrCreateDataset("myDataset")
-        dataset?.setString("myValue", forKey:"myKey")
-        dataset?.synchronize()
+        // Sync Access Log
+        let accessLogDataset = syncClient?.openOrCreateDataset("access_logs")
+        accessLogDataset?.setString("{user_id:1}", forKey:nowString)
+        accessLogDataset?.synchronize()
+        // Sync CampaignAccessLog
+        let campaignLogDataset = syncClient?.openOrCreateDataset("campaign_access_logs")
+        campaignLogDataset?.setString("{campaign_id:1,user_id:1}", forKey:nowString)
+        campaignLogDataset?.synchronize()
     }
 
     override func didReceiveMemoryWarning() {
