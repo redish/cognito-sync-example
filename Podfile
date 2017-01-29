@@ -6,7 +6,6 @@ target 'CognitoSyncExample' do
   use_frameworks!
 
   # Pods for CognitoSyncExample
-  pod 'AWSCore'
-  pod 'AWSCognitoSync'
+  pod 'AWSCognito'
 
 end
