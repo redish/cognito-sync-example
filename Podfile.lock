@@ -1,14 +1,14 @@
 PODS:
-  - AWSCognito (2.4.9):
-    - AWSCore (= 2.4.9)
-  - AWSCore (2.4.9)
+  - AWSCognito (2.5.0):
+    - AWSCore (= 2.5.0)
+  - AWSCore (2.5.0)
 
 DEPENDENCIES:
   - AWSCognito
 
 SPEC CHECKSUMS:
-  AWSCognito: 4fa9fefcadae1d8425b01cbde27d564c21e3fd35
-  AWSCore: 175208358b95492e0ebe0337df2ab415300bddac
+  AWSCognito: 5a1af0c4b351de1ec8d523d3ed0aecce42dd630e
+  AWSCore: e9839d27ceaa2db75934a9c418630ce63c23e347
 
 PODFILE CHECKSUM: b0d0208cef44f10c5d82c02afa2bd8aa0ef6b261
 

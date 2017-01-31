@@ -17,9 +17,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         // Initialize the Amazon Cognito credentials provider
-        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.apNortheast1,
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.APNortheast1,
                                                                 identityPoolId:"ap-northeast-1:b5e7ba68-6b00-4caf-a8f1-ed5a9a03077b")
-        let configuration = AWSServiceConfiguration(region:.apNortheast1, credentialsProvider:credentialsProvider)
+        let configuration = AWSServiceConfiguration(region:.APNortheast1, credentialsProvider:credentialsProvider)
         AWSServiceManager.default().defaultServiceConfiguration = configuration
 
         // Create Now String
@@ -28,16 +28,7 @@ class ViewController: UIViewController {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let nowString = formatter.string(from: now)
         
-        // Initialize the Cognito Sync client
-        let syncClient = AWSCognito.default()
-        // Sync Access Log
-        let accessLogDataset = syncClient?.openOrCreateDataset("access_logs")
-        accessLogDataset?.setString("{user_id:1}", forKey:nowString)
-        accessLogDataset?.synchronize()
-        // Sync CampaignAccessLog
-        let campaignLogDataset = syncClient?.openOrCreateDataset("campaign_access_logs")
-        campaignLogDataset?.setString("{campaign_id:1,user_id:1}", forKey:nowString)
-        campaignLogDataset?.synchronize()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +36,26 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func onClick(_ sender: Any) {
+        // Initialize the Cognito Sync client
+        let syncClient = AWSCognito.default()
+        // Sync Access Log
+        let accessLogDataset = syncClient.openOrCreateDataset("access_logs")
+        accessLogDataset.synchronize()
+        print("---------------aaaaaaaaaaaaaaa")
+        if (accessLogDataset.string(forKey: "session") == nil) {
+            print("session is null")
+        } else {
+            print(accessLogDataset.string(forKey: "session"))
+        }
+        print("---------------bbbbbbbbbbbbbbb")
+        accessLogDataset.setString("{\"type\":\"session\",\"user_id\":\"1\"}", forKey:"session")
+        //        accessLogDataset?.clear()
+        print("---------------ccccccccccccccc")
+        print(accessLogDataset.string(forKey: "session"))
+        print("---------------ddddddddddddddd")
+        accessLogDataset.synchronize()
+    }
 
 }
 
